@@ -87,3 +87,15 @@ Processing by PostsController#show as HTML
   Parameters: {"id"=>"4"}
   Rendered posts/show.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/4" for 190.115.155.181 at 2019-01-19 19:46:33 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+Completed 404 Not Found in 10ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=4):
+  app/controllers/posts_controller.rb:3:in `show'
+
+
